@@ -47,7 +47,7 @@ public class ElevatorProblem
             int total = _bestAssignment[i].Sum();
             double usage = (double)total / _capacity * 100;
 
-            Console.WriteLine($"Trip #{i + 1,-2} | Weights: [{people}] | Total: {total} ({usage:0.0}%)");
+            Console.WriteLine($"Trip #{i + 1,-2} | Weights: [{people}] | Total: {total} | Usage: {usage:0.0}%");
         }
     }
 
