@@ -1,4 +1,6 @@
-﻿namespace BinPackingElevator;
+﻿using BinPackingElevator.Helpers;
+
+namespace BinPackingElevator;
 
 public class ElevatorProblem
 {
@@ -40,6 +42,7 @@ public class ElevatorProblem
         if (personIndex == _n)
         {
             _minElevators = currentElevatorsCount;
+            AssignmentHelper.SaveBestAssignment(currentElevatorsCount, _currentAssignment, _bestAssignment);
             return;
         }
 
