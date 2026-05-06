@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BinPackingElevator;
+﻿namespace BinPackingElevator;
 
 public class ElevatorProblem
 {
@@ -19,6 +13,16 @@ public class ElevatorProblem
     {
         this._n = n;
         this._capacity = capacity;
-        this._weights = weights;
+        this._weights = weights.OrderByDescending(x => x).ToArray();
+    }
+
+    public int Solve()
+    {
+        _elevators = new int[_n];
+        _minElevators = _n;
+
+        _weightSums = new long[_n + 1];
+        for (int i = _n - 1; i >= 0; i--)
+            _weightSums[i] = _weightSums[i + 1] + _weights[i];
     }
 }
