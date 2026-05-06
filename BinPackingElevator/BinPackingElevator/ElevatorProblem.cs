@@ -9,6 +9,9 @@ public class ElevatorProblem
     private int _minElevators;
     private long[] _weightSums;
 
+    private List<List<int>> _currentAssignment = new();
+    private List<List<int>> _bestAssignment = new();
+
     public ElevatorProblem(int n, int capacity, int[] weights)
     {
         this._n = n;
@@ -20,6 +23,7 @@ public class ElevatorProblem
     {
         _elevators = new int[_n];
         _minElevators = _n;
+        for (int i = 0; i < _n; i++) _currentAssignment.Add([]);
 
         _weightSums = new long[_n + 1];
         for (int i = _n - 1; i >= 0; i--)
