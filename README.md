@@ -13,6 +13,7 @@ The project uses a recursive **Backtracking + Branch & Bound** strategy to signi
 - Elevator-trip based simulation
 - Displays detailed trip assignments
 - Uses descending weight sorting heuristic
+- Supports random test data generation
 
 ---
 
@@ -22,6 +23,15 @@ The project uses a recursive **Backtracking + Branch & Bound** strategy to signi
 - C#
 - Backtracking Algorithm
 - Branch & Bound Optimization
+
+---
+
+## 🎲 Random Data Generator
+
+The project includes a helper utility for generating valid random test cases based on assignment constraints:
+
+- `1 ≤ n ≤ 30`
+- `1 ≤ wi ≤ x ≤ 10^6`
 
 ---
 
